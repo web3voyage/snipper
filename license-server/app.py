@@ -99,7 +99,7 @@ engine = create_engine(database_url, pool_pre_ping=True, **engine_options)
 SessionLocal = sessionmaker(engine, expire_on_commit=False)
 Base.metadata.create_all(engine)
 
-app = FastAPI(title="StealthOverlay License Service", docs_url=None, redoc_url=None)
+app = FastAPI(title="StealthOverlay License Service")
 
 
 class GenerateKeysRequest(BaseModel):
